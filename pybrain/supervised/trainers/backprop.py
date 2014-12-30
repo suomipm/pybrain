@@ -227,8 +227,8 @@ class BackpropTrainer(Trainer):
             validationError = self.testOnData(validationData)
             
             if verbose:
-                print "MSE/RMSE - training: {:.5f} / {:.5f}, validation: {:.5f} / {:.5f}".format(trainingError, 
-                    sqrt(trainingError), validationError, sqrt(validationError))            
+                print ("MSE/RMSE - training: {:.5f} / {:.5f}, validation: {:.5f} / {:.5f}".format(trainingError, 
+                    sqrt(trainingError), validationError, sqrt(validationError)))            
             
             if isnan(trainingError) or isnan(validationError):
                 raise Exception("Training produced NaN results")
